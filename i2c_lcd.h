@@ -33,22 +33,32 @@ typedef enum {
 	LCD_ERROR
 } LCD_STATE;
 
+//This function is for inizialitate the instance
 LCD_STATE i2c_lcd_init(i2c_lcd* dev, i2c_lcd_config* config);
 
+//This function print the message contains in s
 void i2c_lcd_print(i2c_lcd* dev, char* s, uint8_t size);
 
+//This function turn on or turn off the back ligth
 void i2c_lcd_bl(i2c_lcd* dev, bool state);
 
+//This function is command home, clear and set cursor on 0,0
 void i2c_lcd_home(i2c_lcd* dev);
 
+//Just return the set cursor on 0,0
 void i2c_lcd_return(i2c_lcd* dev);
 
+//With this you can show or hide the blink
 void i2c_lcd_bk(i2c_lcd* dev, bool state);
 
+//With this you can show or hide the cursor
 void i2c_lcd_cursor(i2c_lcd* dev, bool state);
 
+//This function show or hide the information on display, but the information is saved while the module is powered
 void i2c_lcd_display(i2c_lcd* dev, bool state);
 
+//really i dont know, i dont use this function, just i make it because i see in the datasheet XD
 void i2c_lcd_shift(i2c_lcd* dev, bool state);
 
+//This function move the cursor to the column and row that you give it
 void i2c_lcd_setCursor(i2c_lcd* dev, uint8_t col, uint8_t row);
