@@ -1,6 +1,7 @@
 #pragma once
 
-#include "stm32f1xx_hal.h"
+#include "stm32f1xx_hal.h"  //if you need this for other STM32FX, just change it, the library HAL is compatible with others
+			    // STM32
 #include<stdbool.h>
 
 #define LCD_RS 0
